@@ -2,14 +2,14 @@
     "name": "Cuentas",
     "short_name": "Cuentas",
     "description": "Para administrar los datos de los clientes de cuentas streaming",
-    "start_url": "/",
+    "start_url": "./",
     "background_color": "#2f3d58",
     "theme_color": "#2f3d58",
     "orientation": "any",
     "display": "standalone",
     "icons": [
         {
-            "src": "/vite.png",
+            "src": "./vite.png",
             "sizes": "128x128"
         }
     ]
