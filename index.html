@@ -127,5 +127,21 @@ attempted value: ${i}
   <body>
     <div id="root"></div>
     <textarea hidden id="text-to-copy" rows="4" cols="4"></textarea>
+    <script>
+      var initialHash = location.hash;
+        if(!(window.self===window.top)){
+        var interval = setInterval(()=>{
+           if(location.hash!==initialHash){
+            // Enviar el mensaje al padre
+            window.parent.postMessage({
+                sender: "iframe",
+                message: "ready"
+            }, "*");
+            clearInterval(interval)
+        }
+                  
+        },100)
+      }
+    </script>
   </body>
 </html>
